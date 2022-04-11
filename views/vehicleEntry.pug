@@ -1,0 +1,72 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", type="text/css", href="/css/vehicleEntrycss.css")
+title Vehicle Register
+.center
+  h1 Car Parking Section
+  form#form(name="entryForm", action="/vehicleEntry", method="POST", onsubmit="return validate()")
+    .v-category
+      label#label-category(for="category") Vehicle Category:
+      select#select(name="category")
+        option(value="default", selected) (select one option)
+        option(value="t") Truck
+        option(value="pc") Personal Car
+        option(value="t") Taxi
+        option(value="c") Coaster
+        option(value="b") Bodaboda
+    .duration
+      label#label-duration(for="duration") Duration:
+      select#select(name="category2")
+        option(value="default", selected) (select one option)
+        option(value="d") Day
+        option(value="n") Night
+        option(value="l") Less than 3hrs
+    .txt-field
+      input#nin(type="text", name="nin")
+      span
+      label#label-nin(for="nin") NIN(for only bodabodas)
+      .text-danger#vnin
+    .txt-field
+      input#driversname(type="text", name="driversname")
+      span
+      label#label-driversname(for="driversname") Driver's Name
+      .text-danger#vdriversname
+    .txt-field
+      input#phonenumber(type="text", name="phonenumber")
+      span
+      label#label-phonenumber(for="phonenumber") Phone Number
+      .text-danger#vphonenumber
+    .txt-field
+      input#numberplate(type="text", name="numberplate")
+      span
+      label#label-numberplate(for="numberplate") Number Plate
+      .text-danger#vnumberplate
+    .txt-field
+      input#color(type="text", name="color")
+      span
+      label#label-color(for="color") Color
+      .text-danger#vcolor
+    .txt-field
+      input#arrivaltime(type="text", name="arrivaltime")
+      span
+      label#label-arrivaltime(for="arrivaltime") Arrival Time
+      .text-danger#varrivaltime
+    .txt-field
+      input#date(type="text", name="date")
+      span
+      label#label-date(for="date") Date
+      .text-danger#vdate
+    .txt-field
+      input#model(type="text", name="model")
+      span
+      label#label-model(for="model") Model
+      .text-danger#vmodel
+    .txt-field
+      input#charge(type="text", name="charge")
+      span
+      label#label-charge(for="charge") Charge
+      .text-danger#vcharge
+    .submit
+      input(type="submit", name="submit", value="submit")
+script(src="/validation/vehicleEntryValidate.js")

@@ -1,0 +1,29 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", type="text/css", href="/css/logincss.css")
+title Login
+.center
+  h1 Login Page
+  form#form(name="entryForm", action="/login", method="POST", onsubmit="return validate()")
+    .txt-field
+      input#username(type="text", name="username")
+      span
+      label#label-username(for="username") Username
+      .text-danger#lusername
+    .txt-field
+      input#password(type="password", name="password")
+      span
+      label#label-password(for="password") Password
+      .text-danger#lpassword
+    .pass.
+      
+      Forgot Password?
+      
+    .submit
+      input(type="submit", name="submit", value="login")
+    .signup-link
+      | 
+      Not Not registered?
+      a(href="/signup")  Signup here
+      script(src="/validation/loginValidate.js")
